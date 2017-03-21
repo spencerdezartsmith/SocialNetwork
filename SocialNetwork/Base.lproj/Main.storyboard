@@ -68,17 +68,62 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uW4-bX-Tt7">
+                                <rect key="frame" x="125" y="177" width="125" height="125"/>
+                                <color key="backgroundColor" red="0.25490196078431371" green="0.36078431372549019" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="41E-gh-Fb4"/>
+                                    <constraint firstAttribute="height" constant="125" id="rPY-y6-aYU"/>
+                                </constraints>
+                                <state key="normal" image="f"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOT-Ve-raK">
+                                <rect key="frame" x="34" y="358" width="304" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pH7-L2-XkV">
+                                <rect key="frame" x="35" y="396" width="304" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogN-Dt-7Cj">
+                                <rect key="frame" x="35" y="443" width="304" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.25098039215686274" blue="0.50588235294117645" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kby-o8-7AJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="tintColor" red="0.46384162303664922" green="0.46384162303664922" blue="0.46384162303664922" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="leQ-Cz-6nm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5zc-Gc-b1Y"/>
                             <constraint firstItem="N8Y-Lc-Ntd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6uf-TH-a0X"/>
+                            <constraint firstItem="ogN-Dt-7Cj" firstAttribute="top" secondItem="pH7-L2-XkV" secondAttribute="bottom" constant="17" id="7Bt-P7-TRJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ogN-Dt-7Cj" secondAttribute="trailing" constant="20" id="HZb-3U-iwH"/>
+                            <constraint firstItem="ogN-Dt-7Cj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="JYm-g7-PmU"/>
+                            <constraint firstItem="BOT-Ve-raK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="Kt1-A5-QDX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pwr-s5-OUb" secondAttribute="bottom" id="LJ0-Ql-EvB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BOT-Ve-raK" secondAttribute="trailing" constant="21" id="Mca-Ea-y7x"/>
+                            <constraint firstItem="pH7-L2-XkV" firstAttribute="top" secondItem="BOT-Ve-raK" secondAttribute="bottom" constant="8" id="Nlh-BR-Ps2"/>
+                            <constraint firstItem="BOT-Ve-raK" firstAttribute="top" secondItem="uW4-bX-Tt7" secondAttribute="bottom" constant="56" id="SyB-e7-Nlx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pH7-L2-XkV" secondAttribute="trailing" constant="20" id="Vs5-de-G4W"/>
+                            <constraint firstItem="uW4-bX-Tt7" firstAttribute="top" secondItem="leQ-Cz-6nm" secondAttribute="bottom" constant="26" id="a0e-Gf-3ya"/>
                             <constraint firstAttribute="trailing" secondItem="N8Y-Lc-Ntd" secondAttribute="trailing" id="g2g-pA-qA4"/>
+                            <constraint firstItem="uW4-bX-Tt7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="109" id="tEE-Xi-x2Y"/>
                             <constraint firstItem="Pwr-s5-OUb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v8i-lU-9n3"/>
                             <constraint firstItem="leQ-Cz-6nm" firstAttribute="top" secondItem="N8Y-Lc-Ntd" secondAttribute="bottom" constant="20" id="xRi-jg-Jab"/>
                             <constraint firstItem="leQ-Cz-6nm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xuq-I9-sRF"/>
+                            <constraint firstItem="pH7-L2-XkV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="y0W-w2-4OQ"/>
                             <constraint firstItem="N8Y-Lc-Ntd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yWk-UV-Skk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uW4-bX-Tt7" secondAttribute="trailing" constant="109" id="z41-0G-RUW"/>
                             <constraint firstAttribute="trailing" secondItem="Pwr-s5-OUb" secondAttribute="trailing" id="zPH-AM-JNA"/>
                         </constraints>
                     </view>
@@ -89,6 +134,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="f" width="352" height="328"/>
         <image name="social-network" width="375" height="53"/>
     </resources>
 </document>
