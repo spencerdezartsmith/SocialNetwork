@@ -23,10 +23,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8Y-Lc-Ntd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social-network" translatesAutoresizingMaskIntoConstraints="NO" id="Eaf-Q3-Vd3">
+                                        <rect key="frame" x="24" y="9" width="326" height="92"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.58823529411764708" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="YWd-wy-fcc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Eaf-Q3-Vd3" secondAttribute="bottom" constant="9" id="2Ya-iZ-nAR"/>
+                                    <constraint firstItem="Eaf-Q3-Vd3" firstAttribute="top" secondItem="N8Y-Lc-Ntd" secondAttribute="top" constant="9" id="3nm-mu-NQW"/>
+                                    <constraint firstItem="Eaf-Q3-Vd3" firstAttribute="leading" secondItem="N8Y-Lc-Ntd" secondAttribute="leading" constant="24" id="87o-Lg-tKK"/>
+                                    <constraint firstItem="Eaf-Q3-Vd3" firstAttribute="centerY" secondItem="N8Y-Lc-Ntd" secondAttribute="centerY" id="BND-us-5bJ"/>
+                                    <constraint firstAttribute="height" constant="110" id="YWd-wy-fcc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eaf-Q3-Vd3" secondAttribute="trailing" constant="25" id="ltZ-az-WDD"/>
+                                    <constraint firstItem="Eaf-Q3-Vd3" firstAttribute="centerX" secondItem="N8Y-Lc-Ntd" secondAttribute="centerX" id="rWA-Rq-PZW"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwr-s5-OUb">
@@ -49,7 +60,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a sign in method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leQ-Cz-6nm">
-                                <rect key="frame" x="16" y="148" width="343" height="21"/>
+                                <rect key="frame" x="16" y="130" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="lP1-aH-HKN"/>
                                 </constraints>
@@ -77,4 +88,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="social-network" width="375" height="53"/>
+    </resources>
 </document>
