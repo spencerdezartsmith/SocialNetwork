@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FancyView: UIView {
+class FancyShadowView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
