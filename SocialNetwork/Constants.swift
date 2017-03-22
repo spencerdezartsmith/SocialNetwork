@@ -6,4 +6,7 @@
 //  Copyright © 2017 spencerdezartsmith. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+let SHADOW_GRAY: CGFloat = 120.0 / 255.0
+
