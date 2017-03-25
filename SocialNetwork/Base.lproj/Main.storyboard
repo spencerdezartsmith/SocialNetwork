@@ -153,12 +153,32 @@
                     <view key="view" contentMode="scaleToFill" id="UPW-N5-Rxv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3p-Ng-cdQ">
+                                <rect key="frame" x="172" y="353" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.95918613768775618" green="1" blue="0.95485094424273698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.0" green="0.0820236867635038" blue="0.077282404257546441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="fWG-oA-es4" eventType="touchUpInside" id="Sl7-8G-MbB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0031063556671142578" green="0.64501452445983887" blue="0.60578072071075439" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B3p-Ng-cdQ" firstAttribute="centerX" secondItem="UPW-N5-Rxv" secondAttribute="centerX" id="iiH-A1-nrS"/>
+                            <constraint firstItem="B3p-Ng-cdQ" firstAttribute="centerY" secondItem="UPW-N5-Rxv" secondAttribute="centerY" id="zDM-26-0fr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="nZa-jR-ZpC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kki-dr-p8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="883" y="139"/>
+            <point key="canvasLocation" x="882.60869565217399" y="138.58695652173915"/>
         </scene>
     </scenes>
     <resources>
