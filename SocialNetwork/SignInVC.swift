@@ -21,6 +21,13 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if KeychainWrapper.standard.string(forKey: KEY_UID) != nil {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+    }
 
     @IBAction func facebookBtnTapped(_ sender: Any) {
         
@@ -87,6 +94,7 @@ class SignInVC: UIViewController {
     
     func completeSignIn(id: String) {
         KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
 
 }
