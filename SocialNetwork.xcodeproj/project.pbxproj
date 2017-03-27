@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B1197131E85EB9400E6CD0C /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1197121E85EB9400E6CD0C /* FeedVC.swift */; };
+		1B1197151E89A1BF00E6CD0C /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1197141E89A1BF00E6CD0C /* RoundedView.swift */; };
 		1B6195E01E830C0000E427B3 /* FancyShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6195DF1E830C0000E427B3 /* FancyShadowView.swift */; };
 		1B6195E31E830C9700E427B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6195E21E830C9700E427B3 /* Constants.swift */; };
 		1B6195E51E830EBB00E427B3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6195E41E830EBB00E427B3 /* RoundedButton.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		1B03D05A1E833B0E00E7126F /* SocialNetwork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialNetwork.entitlements; sourceTree = "<group>"; };
 		1B1197121E85EB9400E6CD0C /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		1B1197141E89A1BF00E6CD0C /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		1B6195DF1E830C0000E427B3 /* FancyShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyShadowView.swift; sourceTree = "<group>"; };
 		1B6195E21E830C9700E427B3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B6195E41E830EBB00E427B3 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				1B6195DF1E830C0000E427B3 /* FancyShadowView.swift */,
 				1B6195E41E830EBB00E427B3 /* RoundedButton.swift */,
+				1B1197141E89A1BF00E6CD0C /* RoundedView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				1B1197131E85EB9400E6CD0C /* FeedVC.swift in Sources */,
 				1BF4ED4A1E7B635000428FE5 /* SignInVC.swift in Sources */,
+				1B1197151E89A1BF00E6CD0C /* RoundedView.swift in Sources */,
 				1B6195E51E830EBB00E427B3 /* RoundedButton.swift in Sources */,
 				1BF4ED481E7B635000428FE5 /* AppDelegate.swift in Sources */,
 				1B6195E01E830C0000E427B3 /* FancyShadowView.swift in Sources */,
