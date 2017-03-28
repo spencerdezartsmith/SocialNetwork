@@ -221,22 +221,22 @@
                                     <constraint firstAttribute="trailing" secondItem="i0K-7h-IgI" secondAttribute="trailing" constant="8" id="zXF-6l-89i"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="367" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QXd-Nk-rwn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="367" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QXd-Nk-rwn">
                                 <rect key="frame" x="0.0" y="166" width="414" height="570"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="367" id="xf1-a7-OfC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="367" id="xf1-a7-OfC" customClass="PostCell" customModule="SocialNetwork" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xf1-a7-OfC" id="eew-9o-X5h">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="367"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egr-ck-ELR" customClass="FancyShadowView" customModule="SocialNetwork" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="8" width="382" height="350"/>
+                                                    <rect key="frame" x="16" y="8" width="382" height="351"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PoW-3S-UeE">
-                                                            <rect key="frame" x="8" y="8" width="366" height="305"/>
+                                                            <rect key="frame" x="8" y="8" width="366" height="306"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gtE-EA-i46">
                                                                     <rect key="frame" x="0.0" y="0.0" width="366" height="60"/>
@@ -264,10 +264,10 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="HJv-2m-vSe">
-                                                                    <rect key="frame" x="0.0" y="65" width="366" height="136"/>
+                                                                    <rect key="frame" x="0.0" y="65" width="366" height="137"/>
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vat-Hw-pIW">
-                                                                    <rect key="frame" x="0.0" y="206" width="366" height="99"/>
+                                                                    <rect key="frame" x="0.0" y="207" width="366" height="99"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -276,7 +276,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Pgl-U9-Pad">
-                                                            <rect key="frame" x="308.33333333333326" y="321.33333333333326" width="65.666666666666686" height="20.666666666666686"/>
+                                                            <rect key="frame" x="308.33333333333326" y="322.33333333333326" width="65.666666666666686" height="20.666666666666686"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53H-oy-5Rm">
                                                                     <rect key="frame" x="0.0" y="0.0" width="34.333333333333371" height="20.666666666666686"/>
@@ -330,6 +330,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="QXd-Nk-rwn" id="HjO-Bw-wjP"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="nZa-jR-ZpC"/>
                     </connections>
                 </viewController>
