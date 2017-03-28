@@ -13,10 +13,12 @@ import Firebase
 import SwiftKeychainWrapper
 
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
 
+    @IBOutlet var addImage: CircleView!
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -24,6 +26,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true 
+        imagePicker.delegate = self
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -64,9 +70,22 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImage.image = image
+        } else {
+            print("Valid image was not selected")
+        }
+        // once image is selected get rid of the picker
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func imagePickerTapped(_ sender: Any) {
+        print("Image button tapped") 
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     @IBAction func signOutTapped(_ sender: Any) {
-        
         do {
             try FIRAuth.auth()?.signOut()
             KeychainWrapper.standard.removeObject(forKey: KEY_UID)
