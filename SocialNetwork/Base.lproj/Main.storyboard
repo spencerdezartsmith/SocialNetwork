@@ -181,7 +181,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBs-Y8-OG5" customClass="FancyShadowView" customModule="SocialNetwork" customModuleProvider="target">
-                                <rect key="frame" x="20" y="82" width="374" height="65"/>
+                                <rect key="frame" x="20" y="74" width="374" height="65"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i0K-7h-IgI">
                                         <rect key="frame" x="8" y="8" width="358" height="49"/>
@@ -223,7 +223,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="367" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QXd-Nk-rwn">
-                                <rect key="frame" x="0.0" y="166" width="414" height="570"/>
+                                <rect key="frame" x="0.0" y="147" width="414" height="589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="367" id="xf1-a7-OfC" customClass="PostCell" customModule="SocialNetwork" customModuleProvider="target">
@@ -330,11 +330,11 @@
                         <color key="backgroundColor" red="0.92549019607843142" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QXd-Nk-rwn" firstAttribute="leading" secondItem="UPW-N5-Rxv" secondAttribute="leading" id="04w-Sr-wEu"/>
-                            <constraint firstItem="OBs-Y8-OG5" firstAttribute="top" secondItem="EYz-hD-nLZ" secondAttribute="bottom" constant="16" id="Cfu-vQ-rRz"/>
+                            <constraint firstItem="OBs-Y8-OG5" firstAttribute="top" secondItem="EYz-hD-nLZ" secondAttribute="bottom" constant="8" id="Cfu-vQ-rRz"/>
                             <constraint firstItem="OBs-Y8-OG5" firstAttribute="trailing" secondItem="UPW-N5-Rxv" secondAttribute="trailingMargin" id="Ecj-fo-MhD"/>
                             <constraint firstItem="OBs-Y8-OG5" firstAttribute="leading" secondItem="UPW-N5-Rxv" secondAttribute="leadingMargin" id="H5o-Gf-Zs1"/>
                             <constraint firstItem="EYz-hD-nLZ" firstAttribute="top" secondItem="UPW-N5-Rxv" secondAttribute="top" id="KBD-fH-0qD"/>
-                            <constraint firstItem="QXd-Nk-rwn" firstAttribute="top" secondItem="OBs-Y8-OG5" secondAttribute="bottom" constant="19" id="OlE-Xt-XuS"/>
+                            <constraint firstItem="QXd-Nk-rwn" firstAttribute="top" secondItem="OBs-Y8-OG5" secondAttribute="bottom" constant="8" id="OlE-Xt-XuS"/>
                             <constraint firstItem="EYz-hD-nLZ" firstAttribute="leading" secondItem="UPW-N5-Rxv" secondAttribute="leading" id="Qai-VH-Yzm"/>
                             <constraint firstAttribute="trailing" secondItem="QXd-Nk-rwn" secondAttribute="trailing" id="hPb-fh-Zzg"/>
                             <constraint firstItem="wjx-4x-5Uw" firstAttribute="top" secondItem="QXd-Nk-rwn" secondAttribute="bottom" id="lPO-pZ-mjr"/>
