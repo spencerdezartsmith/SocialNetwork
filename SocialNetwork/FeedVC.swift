@@ -19,6 +19,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     var imagePicker: UIImagePickerController!
     static var imageCache = NSCache<NSString, UIImage>()
 
+    @IBOutlet var captionTextField: UITextField!
     @IBOutlet var addImage: CircleView!
     @IBOutlet var tableView: UITableView!
     
@@ -93,6 +94,38 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBAction func imagePickerTapped(_ sender: Any) {
         print("Image button tapped") 
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func postButtonTapped(_ sender: Any) {
+        guard let caption = captionTextField.text, caption != "" else {
+            print("Caption can not be empty")
+            return
+        }
+        
+        guard let image = addImage.image else {
+            print("An image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(image, 0.2) {
+            
+            // create random identifier
+            let imgUID = NSUUID().uuidString
+            
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            // send up the image with the random uid
+            DataService.ds.REF_IMAGES.child(imgUID).put(imgData, metadata: metadata, completion: { (metadata, error) in
+                if error != nil {
+                    print("Unable to upload image to Firebase Storage")
+                } else {
+                    print("Image was successfully uploaded")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                }
+            })
+        }
+        
     }
     
     @IBAction func signOutTapped(_ sender: Any) {
