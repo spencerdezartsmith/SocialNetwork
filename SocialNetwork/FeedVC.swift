@@ -18,6 +18,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache = NSCache<NSString, UIImage>()
+    var imageSelected = false
 
     @IBOutlet var captionTextField: UITextField!
     @IBOutlet var addImage: CircleView!
@@ -36,10 +37,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshots {
+                    print(snap)
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
                         self.posts.append(post)
+                    
                     }
                 }
             }
@@ -84,6 +87,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = image
+            imageSelected = true
         } else {
             print("Valid image was not selected")
         }
@@ -102,7 +106,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             return
         }
         
-        guard let image = addImage.image else {
+        guard let image = addImage.image, imageSelected == true else {
             print("An image must be selected")
             return
         }
@@ -122,10 +126,27 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 } else {
                     print("Image was successfully uploaded")
                     let downloadURL = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadURL {
+                        self.postToFirebase(imageURL: url)
+                    }
                 }
             })
         }
+    }
+    
+    func postToFirebase(imageURL: String) {
+        let post: Dictionary<String, AnyObject> = [
+                "caption": captionTextField.text as AnyObject,
+                "imageUrl": imageURL as AnyObject,
+                "likes": 0 as AnyObject
+            ]
         
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionTextField.text = ""
+        imageSelected = false
+        addImage.image = UIImage(named: "add-image")
     }
     
     @IBAction func signOutTapped(_ sender: Any) {
