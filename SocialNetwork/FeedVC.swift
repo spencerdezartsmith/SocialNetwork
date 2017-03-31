@@ -147,6 +147,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         captionTextField.text = ""
         imageSelected = false
         addImage.image = UIImage(named: "add-image")
+        
+        tableView.reloadData()
     }
     
     @IBAction func signOutTapped(_ sender: Any) {
