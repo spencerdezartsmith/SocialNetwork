@@ -18,6 +18,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postImg: UIImageView!
     @IBOutlet weak var caption: UITextView!
     @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var likeImg: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,5 +48,14 @@ class PostCell: UITableViewCell {
                 }
             })
         }
+        
+        let likesRef = DataService.ds.REF_CURRENT_USER.child("likes")
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let _ = snapshot.value as? NSNull {
+               self.likeImg.image = UIImage(named: "empty-heart")
+            } else {
+                self.likeImg.image = UIImage(named: "filled-heart")
+            }
+        })
     }
 }
