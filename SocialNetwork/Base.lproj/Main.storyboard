@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,7 +69,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uW4-bX-Tt7" customClass="RoundedButton" customModule="SocialNetwork" customModuleProvider="target">
-                                <rect key="frame" x="144.66666666666669" y="201" width="125.00000000000006" height="125"/>
+                                <rect key="frame" x="145" y="201" width="125" height="125"/>
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.36078431372549019" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="41E-gh-Fb4"/>
@@ -158,7 +158,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZh-NT-9xa">
-                                        <rect key="frame" x="180" y="25" width="55.333333333333343" height="33"/>
+                                        <rect key="frame" x="180" y="25" width="56" height="33"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -217,6 +217,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postButtonTapped:" destination="fWG-oA-es4" eventType="touchUpInside" id="JBJ-oa-VVI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -257,7 +260,7 @@
                                                                                 <constraint firstAttribute="width" constant="60" id="dUn-03-bGr"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HarryHappyHighPants" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgA-5g-W0X">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spencer Dezart-Smith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgA-5g-W0X">
                                                                             <rect key="frame" x="62" y="0.0" width="242" height="60"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                                                             <color key="textColor" red="0.9981165528" green="0.34952795510000001" blue="0.56993997100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -288,16 +291,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Pgl-U9-Pad">
-                                                            <rect key="frame" x="299.66666666666674" y="322.33333333333326" width="74.333333333333314" height="20.666666666666686"/>
+                                                            <rect key="frame" x="299" y="322" width="75" height="21"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53H-oy-5Rm">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="34.333333333333314" height="20.666666666666686"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="21"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obX-H5-3Ti">
-                                                                    <rect key="frame" x="39.333333333333314" y="0.0" width="35" height="20.666666666666686"/>
+                                                                    <rect key="frame" x="40" y="0.0" width="35" height="21"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -326,6 +329,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="vat-Hw-pIW" id="wA8-GF-WCp"/>
+                                            <outlet property="likeImg" destination="C6R-Dt-baN" id="YKA-ef-CKg"/>
                                             <outlet property="likesLabel" destination="obX-H5-3Ti" id="fN8-em-Up1"/>
                                             <outlet property="postImg" destination="HJv-2m-vSe" id="aBF-Zt-2F6"/>
                                             <outlet property="profileImg" destination="9RR-9D-k6h" id="Lpd-6I-b2C"/>
@@ -351,6 +355,7 @@
                     </view>
                     <connections>
                         <outlet property="addImage" destination="peR-nb-BDY" id="k5j-3v-oEN"/>
+                        <outlet property="captionTextField" destination="SLf-L0-LqR" id="GZA-3Y-aNf"/>
                         <outlet property="tableView" destination="QXd-Nk-rwn" id="HjO-Bw-wjP"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="nZa-jR-ZpC"/>
                     </connections>
@@ -376,7 +381,7 @@
         <image name="empty-heart" width="70" height="70"/>
         <image name="f" width="352" height="328"/>
         <image name="placeholder" width="567" height="312"/>
-        <image name="profile" width="113" height="155"/>
+        <image name="profile" width="1280" height="960"/>
         <image name="sign-out" width="92" height="65"/>
         <image name="social-network" width="375" height="53"/>
     </resources>
